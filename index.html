@@ -1,0 +1,57 @@
+<HTML>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    const maleNames = Array("Anders", "Malthe", "Mathias", "Jonas", "Poul", "Johan", "Ted");
+    const randomMaleName = maleNames[Math.floor(Math.random()*maleNames.length)];
+    const femaleNames = Array("Amanda", "Malene", "Milena", "Jasmin", "Pernille", "Ingrid");
+    const randomFemaleName = femaleNames[Math.floor(Math.random()*femaleNames.length)];
+    const nameText = randomFemaleName + " / " + randomMaleName;
+
+    const proffesions = Array("Lærer", "Arbejdsløs", "Studerende", "Musiker", "Tømrer", "Programmør", "Artitekt");
+    const randomProffesion = proffesions[Math.floor(Math.random()*proffesions.length)];
+
+    const quirks = Array("Knipser hele tiden", "Blinker rigtig meget", "Bruger ordet 'ligesom' hele tiden", "Taler meget langsomt");
+    const randomQuirk = quirks[Math.floor(Math.random()*quirks.length)];
+
+
+    $(document).ready(function() {
+      $("#generate").click(function() { 
+            $("#result").removeClass("hidden");
+            $("#title").html("Din nye identitet");
+            $("#generate").addClass("hidden"); 
+            $("#name-value").html(nameText);
+            $("#profession-value").html(randomProffesion);
+            $("#quirk-value").html(randomQuirk);
+      });
+    });
+  </script>
+</head>
+<body class="h-screen w-screen ">
+    <div id="main-box" class="grid justify-items-center items-center h-full w-full bg-gradient-to-t from-green-800 to-blue-800">
+        <div class="border px-8 py-12 w-3/4 bg-gray-200 rounded-md shadow-lg">
+          <h1 id="title" class="mb-8 font-bold text-3xl"> Find din nye identitet </h1>
+          <div id="generate" class="border p-4 text-center rounded-md bg-red-200">
+            Lav ny identitet!
+          </div>
+          <div id="result" class="mt-4 hidden w-full">
+            <div id="name" class="flex flex-row w-full">
+              <p class="w-1/3 font-bold"> Navn </p>
+              <p id="name-value"> Anders / Anne </p>
+            </div>
+            <div id="profession" class="flex flex-row w-full">
+              <p class="w-1/3 font-bold"> Proffesion </p>
+              <p id="profession-value"> Glarmester </p>
+            </div>
+            <div id="quirk" class="flex flex-row w-full">
+              <p class="w-1/3 font-bold"> Kendetegn </p>
+              <p id="quirk-value"> Knipser hele tiden </p>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+
