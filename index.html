@@ -5,16 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <script>
-    const maleNames = Array("Anders", "Malthe", "Mathias", "Jonas", "Poul", "Johan", "Ted");
+    const maleNames = Array(
+          "Anders",
+          "Malthe",
+          "Mathias",
+          "Jonas",
+          "Poul",
+          "Johan",
+          "Ted",
+          "William",
+          "Noah",
+          "Lucas",
+          "Emil",
+          "Oliver",
+          "Oscar",
+          "Victor",
+          "Alfred",
+          "Carl",
+        );
     const randomMaleName = maleNames[Math.floor(Math.random()*maleNames.length)];
-    const femaleNames = Array("Amanda", "Malene", "Milena", "Jasmin", "Pernille", "Ingrid");
+    const femaleNames = Array(
+          "Amanda", 
+          "Malene", 
+          "Milena", 
+          "Jasmin", 
+          "Pernille", 
+          "Ingrid",
+          "Sofia",
+          "Freja",
+          "Ella",
+          "Alma",
+          "Anna",
+          "Emma",
+          "Laura",
+          "Clara",
+          "Ida",
+          "Isabella",
+        );
     const randomFemaleName = femaleNames[Math.floor(Math.random()*femaleNames.length)];
     const nameText = randomFemaleName + " / " + randomMaleName;
 
-    const proffesions = Array("Lærer", "Arbejdsløs", "Studerende", "Musiker", "Tømrer", "Programmør", "Artitekt");
+    const proffesions = Array(
+          "Lærer",
+          "Arbejdsløs",
+          "Studerende",
+          "Musiker",
+          "Tømrer",
+          "Programmør",
+          "Artitekt",
+          "Ingeniør",
+          "Maler",
+          "Kasseassistent",
+          "Blomsterbinder",
+          "Telefonsælger",
+        );
     const randomProffesion = proffesions[Math.floor(Math.random()*proffesions.length)];
 
-    const quirks = Array("Knipser hele tiden", "Blinker rigtig meget", "Bruger ordet 'ligesom' hele tiden", "Taler meget langsomt");
+    const quirks = Array(
+          "Knipser hele tiden",
+          "Blinker rigtig meget",
+          "Bruger ordet 'ligesom' hele tiden",
+          "Taler meget langsomt",
+          "Er veganer",
+          "Har rigtig mange katte derhjemme - taler meget om dem",
+          "Gaber ofte",
+          "Meget nemt distraheret",
+          "Ekstremt høflig",
+          "Trækker vejret meget tungt",
+          "Kigger en gang imellem over skulderen",
+          "Synes at ALT er sjovt",
+        );
     const randomQuirk = quirks[Math.floor(Math.random()*quirks.length)];
 
 
